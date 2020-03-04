@@ -1,0 +1,4 @@
+Wilhelm, Greg 90, 100, 95
+Poppins, Mary 79, 100, 99
+Stark, Tony 100, 100, 100
+Banner, Bruce 100, 20, 50
