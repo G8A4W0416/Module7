@@ -10,6 +10,7 @@ three times.
 
 """
 
+
 def get_input():
     user_input = int(input("Please enter a number: "))
     return user_input
@@ -19,11 +20,14 @@ def make_list():
     inputs = []
     try:
         value = int(get_input())
-        for i in range(3):
-            inputs.insert(i, value)
-        return inputs
+        if value < 1 or value > 50:
+            raise ValueError
+        else:
+            for i in range(3):
+                inputs.insert(i, value)
+            return inputs
     except ValueError:
-        print("Invalid type.")
+        raise ValueError
 
 
 if __name__ == '__main__':
