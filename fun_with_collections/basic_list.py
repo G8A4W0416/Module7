@@ -1,15 +1,31 @@
+"""
+Program basic_list.py
+
+Author: Greg Wilhelm
+
+Last date modified: 03/04/2020
+
+This is just a simple list builder taking in a integer entered by the user and creating a list by repeating the value
+three times.
+
+"""
+
 def get_input():
-    pass
+    user_input = int(input("Please enter a number: "))
+    return user_input
 
 
 def make_list():
     inputs = []
-
-    for i in range(3):
-        try:
-            value = int(get_input())
+    try:
+        value = int(get_input())
+        for i in range(3):
             inputs.insert(i, value)
-        except ValueError:
-            print("Invalid type.")
+        return inputs
+    except ValueError:
+        print("Invalid type.")
 
-    return inputs
+
+if __name__ == '__main__':
+    list_built = make_list()
+    print(list_built)
